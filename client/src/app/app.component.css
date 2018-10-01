@@ -1,0 +1,49 @@
+html,body{
+ margin: 0px;
+ height: 100%;
+ background: rgb(173, 60, 60);
+
+}
+
+.head-title{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.navigation{
+
+    text-align: center;
+    color: aliceblue;
+    background: #1c1c1f;
+    height: 100%;
+}
+
+.navigation a{
+    color: #ddd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.navigation a:hover{
+    color: white;
+}
+
+.navigation .fas{
+    font-size: 25px;
+    display: block;
+    width: 100%;
+}
+
+#user_logged{
+    text-decoration: center;
+    background: #1c1c1f;
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid #444;
+    width: 75%; 
+}
