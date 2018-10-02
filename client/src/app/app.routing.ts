@@ -2,6 +2,7 @@ import {ModuleWithProviders } from '@angular/core';
 import {Routes,RouterModule} from '@angular/router';
 
 import {EditUserComponent} from './edit-user/edit-user.component';
+import {ArtistListComponent} from './artist-list/artist-list.component';
 
 const appRoutes:Routes = [
     {
@@ -13,10 +14,13 @@ const appRoutes:Routes = [
         component : EditUserComponent
     },
     {
+        path: 'artists/:page?',
+        component : ArtistListComponent
+    },
+    {
         path: '**',
         component : EditUserComponent
     }
-
 ];
 
 export const appRoutingProviders: any[] = []

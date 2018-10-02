@@ -1,8 +1,9 @@
-html,body{
- margin: 0px;
- height: 100%;
- background: rgb(173, 60, 60);
+section{
+    height: 100%;
+}
 
+.main{
+    display: flex;
 }
 
 .head-title{
@@ -13,12 +14,31 @@ html,body{
     display: block;
 }
 
-.navigation{
+.active{
+    border-bottom: 4px solid #84bd00;
+    padding-bottom: 4px
+}
 
+
+.side__menu{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    background: #1c1c1f;
+    justify-content: space-between;
+}
+
+.side__menu h1, .side__menu h1 a{
+    margin: 0;
+}
+
+.navigation{
     text-align: center;
     color: aliceblue;
     background: #1c1c1f;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation a{
@@ -42,8 +62,21 @@ html,body{
 #user_logged{
     text-decoration: center;
     background: #1c1c1f;
-    position: absolute;
-    bottom: 0px;
-    border-top: 1px solid #444;
-    width: 75%; 
+    border-top: 2px solid #444;
 }
+
+#image_logged{
+    background: eee;
+    border-radius: 100px;
+    height: 57px;
+    width: 57px;
+    margin: 0px auto;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+
+.btn-logout{
+    cursor: pointer;
+}
+
