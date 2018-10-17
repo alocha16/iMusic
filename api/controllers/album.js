@@ -74,8 +74,6 @@ function getAlbums(req,res){
 			});
 }
 
-
-
 function updateAlbum(req,res){
 
 		var albumId = req.params.id;

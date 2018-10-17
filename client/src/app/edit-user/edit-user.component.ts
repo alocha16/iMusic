@@ -69,7 +69,7 @@ export class EditUserComponent implements OnInit {
               }
       },
       error => {
-        console.log("errror");
+        console.log("error");
 
         var errorMessage  = <any> error;
         if(errorMessage != null){

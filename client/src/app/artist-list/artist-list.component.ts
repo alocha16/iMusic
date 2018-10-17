@@ -33,6 +33,7 @@ export class ArtistListComponent implements OnInit {
     }
 
   ngOnInit() {
+    
   }
 
 }

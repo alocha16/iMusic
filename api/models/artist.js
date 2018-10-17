@@ -5,9 +5,10 @@ var schema = mongoose.Schema;
 
 var ArtistSchema = schema({
    name: String,
+   surname: String,
    description: String,
    image: String,
-   surname: String
+
 });
 
 

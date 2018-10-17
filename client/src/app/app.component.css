@@ -6,6 +6,10 @@ section{
     display: flex;
 }
 
+.central{
+    margin-top:20px;
+}
+
 .head-title{
     font-size: 20px;
     font-weight: bold;
@@ -29,7 +33,7 @@ section{
 }
 
 .side__menu h1, .side__menu h1 a{
-    margin: 0;
+    margin-top:25px;
 }
 
 .navigation{
