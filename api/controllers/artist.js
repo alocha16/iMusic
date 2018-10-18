@@ -56,7 +56,7 @@ function getArtists(req,res){
 		var page = 1;
 	}
 
-	var itemsPerPage = 3;
+	var itemsPerPage = 4;
 
 	Artist.find().sort('name').paginate(page,itemsPerPage, (err,artists,total) => {
 
@@ -89,7 +89,7 @@ function updateArtist(req,res){
 			if(!artistUpdated){
 				res.status(404).send({mesagge:'El artista no se ha podido actualizar'});
 			}else{
-				res.status(200).send(artistUpdated);
+				res.status(200).send({artist:update});
 			}
 		}
 	});

@@ -20,11 +20,11 @@ const appRoutes:Routes = [
         component : EditUserComponent
     },
     {
-        path: 'artists/:page?',
+        path: 'artists/:page',
         component : ArtistListComponent
     },
     {
-        path: 'create_artist',
+        path: 'create_artist/:id?',
         component : ArtistAddComponent
     },
     {
