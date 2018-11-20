@@ -121,7 +121,7 @@ function deleteArtist(req,res){
 								if(!songRemoved){
 									res.status(404).send({mesagge:'la cancion no se ha podido eliminar'});
 								}else{
-									res.status(200).send(artistRemoved);
+									res.status(200).send({artist:artistRemoved});
 								     }
 							     }
 							    });

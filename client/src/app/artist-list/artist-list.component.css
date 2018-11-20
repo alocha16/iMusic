@@ -44,3 +44,19 @@ display: flex;
     margin-top: 15px;
     margin-left: 15px;
 }
+
+.seguro{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    position: absolute;
+
+}
+.buttons{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    margin-top: 5px;
+}

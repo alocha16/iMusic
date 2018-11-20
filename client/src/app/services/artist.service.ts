@@ -74,7 +74,7 @@ export class ArtistService{
            });
 
            let options = new RequestOptions({headers:headers});
-           return this._http.delete(this.url+'artists/'+_id,options)
+           return this._http.delete(this.url+'artist/'+_id,options)
             .map(res=> res.json());
 
     }
