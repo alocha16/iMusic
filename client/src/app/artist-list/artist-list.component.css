@@ -60,3 +60,18 @@ display: flex;
     grid-column-gap: 10px;
     margin-top: 5px;
 }
+
+.head-page{
+ display: grid;
+ grid-template-columns: 5fr 1fr;
+ margin-left: 20px;
+
+}
+
+.addArtist{
+    margin:auto;
+}
+
+.btn-secondary{
+    background-color: #55af00
+}

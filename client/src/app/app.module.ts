@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { ArtistAddComponent } from './artist-add/artist-add.component';
 import { ArtistEditComponent } from './artist-edit/artist-edit.component';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
+import { AlbumAddComponent } from './album-add/album-add.component';
+import { AlbumEditComponent } from './album-edit/album-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
     ArtistAddComponent,
     ArtistEditComponent,
     ArtistDetailComponent,
+    AlbumAddComponent,
+    AlbumEditComponent,
   ],
   imports: [
     BrowserModule,

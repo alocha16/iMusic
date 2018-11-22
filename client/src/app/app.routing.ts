@@ -6,6 +6,8 @@ import {ArtistListComponent} from './artist-list/artist-list.component';
 import {HomeComponent} from './home/home.component';
 import { ArtistAddComponent } from './artist-add/artist-add.component';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
+import { AlbumAddComponent } from './album-add/album-add.component';
+import { AlbumEditComponent } from './album-edit/album-edit.component';
 
 const appRoutes:Routes = [
     {
@@ -33,9 +35,18 @@ const appRoutes:Routes = [
         component : ArtistDetailComponent
     },
     {
+        path: 'create_album/:id',
+        component : AlbumAddComponent
+    },
+    {
+        path: 'edit_album/:id',
+        component : AlbumEditComponent
+    },
+    {
         path: '**',
         component : HomeComponent
     }
+    
 ];
 
 export const appRoutingProviders: any[] = []

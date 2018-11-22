@@ -1,12 +1,24 @@
-#artist-head-card .image{
-    height: 150px;
-    width: 150px;
+#head {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 2fr;
+    grid-column-gap: 20px;
+}
+
+#divImage{
+    height: 200px;
+    width: 200px;
     overflow: hidden;
     border-radius: 10px
 }
 
-#artist-head-card .image img{
+#divImage img{
    width: 100%;
 }
+
+.btn-secondary{
+    background-color: #55af00
+}
+
+
 
 

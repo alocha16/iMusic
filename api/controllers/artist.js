@@ -16,7 +16,7 @@ function saveArtist(req,res){
 
 	artist.name =params.name;
 	artist.description = params.description;
-	artist.image = 'null';
+	artist.image = 'generic.png';
 
 	artist.save((err,artistStored)=>{
 		if(err){

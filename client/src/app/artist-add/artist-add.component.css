@@ -1,4 +1,7 @@
 .artist_image_for_edit img{
-
     width: 150px;
+}
+
+.btn-secondary{
+    background-color: #55af00
 }

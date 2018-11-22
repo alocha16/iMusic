@@ -81,7 +81,7 @@ getArtist(){
 }
 
 addArtist(){
-
+  
   this._artistService.addArtist(this.token,this.artist).subscribe(
     response => {
     

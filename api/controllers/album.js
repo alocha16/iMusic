@@ -17,7 +17,7 @@ function saveAlbum(req,res){
 	album.title =params.title;
 	album.description = params.description;
 	album.year = params.year;;
-	album.image = 'null';
+	album.image = 'generic.jpg';
 	album.artist = params.artist;
 
 	album.save((err,albumStored)=>{
@@ -87,7 +87,7 @@ function updateAlbum(req,res){
 			if(!albumUpdated){
 				res.status(404).send({mesagge:'El album no se ha podido actualizar'});
 			}else{
-				res.status(200).send(albumUpdated);
+				res.status(200).send({album:albumUpdated});
 			}
 		}
 	});

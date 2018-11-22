@@ -1,0 +1,62 @@
+
+<div class="col-lg-10" *ngIf="identity && identity.role == 'ADMIN'">
+
+  <h1>{{page_title}}</h1>
+  
+  <div *ngIf="alert">
+      <div class="alert alert-info" role="alert">
+        <strong>Listo</strong> {{alert}}
+      </div>
+  </div>
+  
+  
+  <form #addAlbumForm ="ngForm" (ngSubmit)="onSubmit()" class="col-md-6">
+      <p>
+          <label>Titulo:</label>
+          <input type="text" #title='ngModel' name ="title" [(ngModel)]="album.title" class="form-control" required />
+          <span *ngIf="!title.valid && title.touched">
+              El Titulo es requerido
+          </span>
+      </p>
+  
+      <p>
+            <label>Descripcion:</label>
+            <textarea type="text" #description='ngModel' name ="description" [(ngModel)]="album.description" class="form-control" required ></textarea>
+            <span *ngIf="!description.valid && description.touched">
+                La descripcion es requerida
+            </span>   
+      </p>
+
+      <p>
+        <label>Anio:</label>
+        <input type="number" #anio='ngModel' name ="anio" [(ngModel)]="album.year" class="form-control" required />
+        <span *ngIf="!anio.valid && anio.touched">
+            El anio es requerido
+        </span>   
+      </p>
+  
+  
+      <div *ngIf="is_edit" >
+          <div class="artist_image_for_edit" *ngIf="album.image && album.image != 'null'">
+              <img src="{{url+'get-image-album/'+album.image}}" />
+          </div>
+  
+          <p>
+              <label for="image">Sube la imagen del album</label>
+              <input type="file" placeholder="Subir Imagen" name="image" id="image" (change)="fileChangeEvent($event)">
+          </p>
+   
+  
+      </div>
+  
+      <input type="submit" value="{{page_title}}" [disabled]="!addAlbumForm.form.valid" class="btn btn-secondary"/>
+  
+  
+  </form>
+  
+  </div>
+  
+  <div *ngIf="!identity && identity.role != 'ADMIN'">
+      <h1>Error</h1>
+      <p>No tienes acceso a esta pagina</p>
+  </div>

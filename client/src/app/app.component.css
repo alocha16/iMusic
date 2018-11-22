@@ -86,3 +86,6 @@ section{
     cursor: pointer;
 }
 
+.btn-secondary{
+    background-color: #55af00
+}
