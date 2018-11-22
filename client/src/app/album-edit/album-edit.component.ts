@@ -81,8 +81,6 @@ fileChangeEvent(fileInput: any){
 }
 
 editAlbum(){
-
-  console.log("2");
   this._route.params.forEach((params: Params) =>{
 
     let id = params['id']; 
@@ -98,7 +96,7 @@ this._albumService.editAlbum(this.token,id ,this.album).subscribe(
       this._uploadService.makeFileRequest(this.url+'upload-image-album/'+id,[],this.filesToUpload,this.token,'image')
                 .then(
                   result=>{
-                    this._router.navigate(['/artists',1]);
+                    //this._router.navigate(['/artista',id]);
                   },
                   error =>{
                     console.log(error);
@@ -120,7 +118,6 @@ this._albumService.editAlbum(this.token,id ,this.album).subscribe(
 }
 
 onSubmit(){
-  console.log("1");
   this.editAlbum();
 }
 

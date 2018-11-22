@@ -36,20 +36,28 @@
       </p>
   
   
-      <div *ngIf="is_edit" >
-          <div class="artist_image_for_edit" *ngIf="album.image && album.image != 'null'">
+      <div id="divEditImage" *ngIf="is_edit" >
+
+
+        <div class="album_image_for_edit" *ngIf="album.image && album.image != 'null'">
               <img src="{{url+'get-image-album/'+album.image}}" />
-          </div>
+        </div>
   
-          <p>
-              <label for="image">Sube la imagen del album</label>
-              <input type="file" placeholder="Subir Imagen" name="image" id="image" (change)="fileChangeEvent($event)">
-          </p>
-   
+        <div id="optUpload">
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupFileAddon01">Album Cover</span>
+                        </div>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" (change)="fileChangeEvent($event)" name="image">
+                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                      </div>
+         </div>
   
       </div>
   
-      <input type="submit" value="{{page_title}}" [disabled]="!addAlbumForm.form.valid" class="btn btn-secondary"/>
+      <input id="btnForm" type="submit" value="{{page_title}}" [disabled]="!addAlbumForm.form.valid" class="btn btn-secondary"/>
   
   
   </form>

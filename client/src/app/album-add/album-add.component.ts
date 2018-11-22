@@ -44,13 +44,13 @@ export class AlbumAddComponent implements OnInit {
     }
 
   ngOnInit() {
-      this._route.params.forEach((params: Params) =>{
-      this.artist_id = params['id?']; });
-      this.album.artist = this.artist_id;
   }
 
   addAlbum(){
 
+    this._route.params.forEach((params: Params) =>{
+      this.artist_id = params['id'];
+      this.album.artist = this.artist_id;
       this._albumService.addAlbum(this.token,this.album).subscribe(
         response =>{
           if(!response.album){
@@ -59,6 +59,7 @@ export class AlbumAddComponent implements OnInit {
           }else{
             this.alert = "Album creado";
             this.album = response.album;
+            this._router.navigate(['/edit_album', response.album._id]);
           }
         },
         error => {
@@ -70,6 +71,7 @@ export class AlbumAddComponent implements OnInit {
           } 
         }
       );
+    });
   }
 
   fileChangeEvent(fileInput: any){

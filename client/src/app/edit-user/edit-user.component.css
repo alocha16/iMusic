@@ -1,0 +1,23 @@
+#divEditImage{
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: auto;
+}
+
+#optUpload{
+    margin-top: 70px;
+}
+
+#btnForm{
+    margin-top: 25px;
+}
+
+.btn-secondary{
+    background-color: #55af00
+}
+
+#user_image_for_edit img{
+    width: 200px;
+    border-radius: 10px;
+}

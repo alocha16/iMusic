@@ -33,17 +33,28 @@
           </span>
       </p>
 
-      <div class="image_for_edit" *ngIf="user.image && user.image != 'null'">
-        <img src="{{url + 'get-image-user/' +user.image}}" style="width: 50px"/>
+      <div id="divEditImage">
+
+      <div id="user_image_for_edit" *ngIf="user.image && user.image != 'null'">
+        <img src="{{url + 'get-image-user/' +user.image}}"/>
       </div>
 
-        <p>
-          <label>Sube tu foto:  </label>
-          <input type="file" placeholder="Subir imagen.." (change)="fileChangeEvent($event)"/>
-        </p>
+      <div id="optUpload">
+            <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupFileAddon01">Imagen de perfil</span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" (change)="fileChangeEvent($event)" name="image">
+                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                  </div>
+     </div>
+
+    </div>
       
 
-      <input type="submit" value="Actualizar datos" class="btn btn-primary"/>
+      <input id="btnForm" type="submit" value="Actualizar datos" class="btn btn-secondary"/>
 
 </form>
 

@@ -1,7 +1,23 @@
 .artist_image_for_edit img{
-    width: 150px;
+    width: 200px;
+    border-radius: 10px;
 }
 
 .btn-secondary{
     background-color: #55af00
+}
+
+#divEditImage{
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: auto;
+}
+
+#btnForm{
+    margin-top: 25px;
+}
+
+#optUpload{
+    margin-top: 70px;
 }
